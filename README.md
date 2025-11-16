@@ -86,4 +86,4 @@ Sigue estos pasos para configurar y ejecutar la aplicación en tu sistema:
 *   **No Compartir:** Nunca compartas tu contraseña maestra ni el archivo `passwords.json.enc` con nadie.
 
 ---
-Desarrollado con Python y `customtkinter`.
+Desarrollado con Python y `customtkinter`.## Característica: Generador de Contraseñas
