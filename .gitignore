@@ -1,0 +1,25 @@
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Archivos específicos de tu proyecto
+passwords.json.enc
+salt.bin
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+*.tmp
