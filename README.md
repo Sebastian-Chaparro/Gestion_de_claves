@@ -89,3 +89,5 @@ Sigue estos pasos para configurar y ejecutar la aplicación en tu sistema:
 Desarrollado con Python y `customtkinter`.
 ## Característica: Generador de Contraseñas
 ## Liena modificada localmente.
+## Liena modificada en linea.
+
