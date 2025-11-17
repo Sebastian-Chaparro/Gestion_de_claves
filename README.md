@@ -91,3 +91,29 @@ Desarrollado con Python y `customtkinter`.
 ## Liena modificada localmente.
 ## Liena modificada en linea.
 
+## Flujo Git Aplicado
+
+Este proyecto sigue un flujo de trabajo basado en ramas de características (feature branches). Las nuevas funcionalidades, correcciones de errores y mejoras de documentación se desarrollan en ramas separadas (`feature/`, `fix/`, `docs/`) para mantener la rama `main` estable. Los cambios se integran en `main` a través de Pull Requests, permitiendo revisión de código y pruebas antes de la fusión.
+
+## Comandos Git Relevantes
+
+Aquí se listan algunos de los comandos Git más utilizados en el desarrollo de este proyecto:
+
+*   `git clone <url>`: Clona un repositorio remoto a tu máquina local.
+*   `git checkout -b <nombre-rama>`: Crea y cambia a una nueva rama.
+*   `git checkout <nombre-rama>`: Cambia a una rama existente.
+*   `git add .`: Añade todos los cambios al área de preparación.
+*   `git commit -m "Mensaje"`: Guarda los cambios en el historial de la rama actual.
+*   `git push -u origin <nombre-rama>`: Sube la rama local al repositorio remoto y establece el seguimiento.
+*   `git pull origin <nombre-rama>`: Descarga y fusiona los cambios del repositorio remoto.
+*   `git merge <rama-a-fusionar>`: Fusiona los cambios de otra rama en la rama actual.
+*   `git branch -d <nombre-rama>`: Elimina una rama localmente.
+*   `git push origin --delete <nombre-rama>`: Elimina una rama del repositorio remoto.
+
+## Colaboración (Fork y Pull Request)
+
+Este proyecto fomenta la colaboración a través del modelo de `Fork` y `Pull Request`. Si deseas contribuir, puedes bifurcar este repositorio, realizar tus cambios en una rama y luego enviar un Pull Request al repositorio original.
+
+Como ejemplo de colaboración, se envió un Pull Request al siguiente repositorio de un compañero:
+
+*   **Repositorio del Compañero:** [https://github.com/Sebastian-uni/TEST_COLABORATION.git](https://github.com/Sebastian-uni/TEST_COLABORATION.git)
