@@ -27,3 +27,28 @@ Git ofrece dos comandos principales para deshacer cambios: `git reset` y `git re
 *   **Qué hace:** No borra el historial. En su lugar, crea un **nuevo commit** que aplica los cambios inversos al commit que se quiere deshacer. Si un commit añadió una línea, el `revert` creará un nuevo commit que la elimina.
 *   **Cuándo usarlo:** Es la forma **segura y profesional** de deshacer cambios en una **rama pública o compartida**.
 *   **Ventajas:** Mantiene la integridad y la transparencia del historial. Deja un registro claro de que un cambio fue introducido y luego deshecho explícitamente, lo cual es crucial para la auditoría y el trabajo en equipo. No causa problemas a otros colaboradores porque no altera la historia pasada, solo añade un nuevo estado al proyecto.
+
+## Análisis del Proceso de Conflicto de Fusión (Merge Conflict)
+
+Un conflicto de fusión es una parte inevitable del trabajo con Git en un entorno colaborativo. Comprender su origen y cómo resolverlo es fundamental para mantener la integridad del código.
+
+### Origen del Conflicto
+
+Un conflicto ocurre cuando Git no puede decidir automáticamente cómo fusionar dos ramas. El escenario más común es cuando dos ramas diferentes han modificado **las mismas líneas en el mismo archivo**. Git no tiene forma de saber qué versión es la "correcta" o cómo combinar los cambios, por lo que detiene el proceso de fusión y le pide al desarrollador que tome una decisión.
+
+### Proceso de Solución
+
+La resolución de un conflicto es un proceso manual que requiere la intervención del desarrollador:
+
+1.  **Detección:** Git detiene la fusión (`git merge` o `git pull`) y marca los archivos conflictivos.
+2.  **Inspección:** El desarrollador debe abrir los archivos marcados. Dentro de ellos, Git inserta marcadores visuales (`<<<<<<< HEAD`, `=======`, `>>>>>>> nombre-rama`) para delimitar claramente qué líneas provienen de la rama actual (`HEAD`) y cuáles provienen de la rama que se está intentando fusionar.
+3.  **Resolución Manual:** El desarrollador edita el archivo para eliminar los marcadores de Git y dejar el código en el estado final deseado. Esto puede implicar quedarse con una de las versiones, con la otra, o combinar ambas de una manera lógica.
+4.  **Finalización:** Una vez que el archivo se ha corregido, se le informa a Git que el conflicto está resuelto usando `git add <archivo-resuelto>`. Finalmente, se completa la fusión con `git commit`, creando un nuevo "merge commit" que une las dos historias y contiene la resolución del conflicto.
+
+### Importancia para la Integridad del Código
+
+Manejar correctamente los conflictos es crucial porque:
+
+*   **Previene la Pérdida de Trabajo:** Asegura que los cambios de un desarrollador no sobrescriban accidentalmente los de otro.
+*   **Fuerza una Decisión Consciente:** Obliga a los desarrolladores a comunicarse y a tomar una decisión informada sobre cómo deben integrarse los cambios que compiten entre sí.
+*   **Garantiza un Código Funcional:** Al resolver los conflictos manualmente, se garantiza que la versión final del código en la rama principal sea coherente, esté completa y funcione como se espera, manteniendo así la calidad y la integridad de todo el proyecto.
